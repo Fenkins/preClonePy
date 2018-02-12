@@ -79,7 +79,7 @@ print(str(responseCHGDict['end_date']))
 print'integer'
 
 
-# Calculating proper start/end time  
+# Calculating proper start/end time 
 datePartStart = str(responseCHGDict['start_date'])[:11]
 print(datePartStart)
 # Received date in format of 2018-06-01
