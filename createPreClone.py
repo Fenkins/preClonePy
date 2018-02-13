@@ -12,7 +12,7 @@ hostName = ()
 userName = ()
 password = ()
 if os.path.isfile(filePath):
-# Reading data from existing file
+	# Reading data from existing file
 	f=open(filePath)
 	lines=f.readlines()
 	hostName = lines[0].rstrip()
@@ -33,7 +33,6 @@ else:
 	with open (filePath, 'a') as f: f.write(password)
 	# Account info is stored on the disk now
 	print 'Configuration saved'
-# Here is what we got so far
 
 
 # Create client object
