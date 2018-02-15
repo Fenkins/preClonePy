@@ -3,6 +3,7 @@ import shelve
 import os.path
 import pytz
 from datetime import datetime
+import pyperclip
 
 
 osPath = os.path.abspath(__file__)
@@ -81,5 +82,10 @@ new_record = {
 # Creating a new sctask record
 resultSR = sctask.create(payload=new_record)
 
+
 # Printing result
 print 'Pre-clone checklist available at: ' + resultSR['number']
+# Copying to clipboard
+pyperclip.copy(resultSR['number'])
+spam = pyperclip.paste()
+print 'Task number has been copied to clipboard'
